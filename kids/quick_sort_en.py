@@ -16,12 +16,13 @@ def quick_sort(array, low, high):
         while pivot < array[j]:
             j -= 1
         if i < j:
+            print(f'{array} -> swapping {array[i]} and {array[j]}')
             array[i], array[j] = array[j], array[i]
 
-    pivot = j
-    quick_sort(array, low, pivot - 1)
-    quick_sort(array, pivot + 1, high)
+    print(f'the pivot is now at index {j}')
+    quick_sort(array, low, j - 1)
+    quick_sort(array, j + 1, high)
 
 
 quick_sort(numbers, 0, len(numbers) - 1)
-print(numbers)
+print(f'sorted {numbers}')
