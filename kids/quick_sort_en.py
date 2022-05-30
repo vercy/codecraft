@@ -1,7 +1,11 @@
 
-
 # ascending order using quick sort
 numbers = [8, 7, 4, 5, 3]
+
+# pick any number from the list
+# move smaller numbers to the left of the chosen number
+# move bigger numbers to the right of the chosen number
+# repeat the process for the left and right sides
 
 
 def quick_sort(array, low, high):
@@ -13,8 +17,9 @@ def quick_sort(array, low, high):
     while i < j:
         while array[i] < pivot:
             i += 1
-        while pivot < array[j]:
+        while array[j] > pivot:
             j -= 1
+
         if i < j:
             print(f'{array} -> swapping {array[i]} and {array[j]}')
             array[i], array[j] = array[j], array[i]
