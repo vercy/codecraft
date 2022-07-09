@@ -1,5 +1,5 @@
 
-# ascending order using heap sort
+# ascending order using insertion sort
 numbers = [7, 4, 8, 5, 3]
 
 # take each element from the list
