@@ -24,3 +24,4 @@ with recursive paths(path, last) as (
      where not json_contains(path, json_quote(to_node))
 )
 select path from paths where json_extract(path, '$[last]') = @end_node limit 1;
+
